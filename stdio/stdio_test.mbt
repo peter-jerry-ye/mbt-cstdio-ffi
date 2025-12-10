@@ -12,9 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-///|
-
-///|
 test "no file test" {
   // TEST Value: fopen perror isNULL
   let fd : FILE = fopen(b"no-exist.txt\x00", b"r+\x00")
@@ -22,7 +19,6 @@ test "no file test" {
   assert_eq(isNULL(fd), true)
 }
 
-///|
 test "file write&append test" {
   // TEST Value: fopen perror isNULL
 
@@ -35,7 +31,6 @@ test "file write&append test" {
 
 }
 
-///|
 test "unsafe printf test" {
   // TEST Value: printf
   println(("printf0: ", printf_bytes(b"Hello, world!\n\x00")))
@@ -49,7 +44,6 @@ test "unsafe printf test" {
   )
 }
 
-///|
 test "string printf test" {
   let char = '🥵'
   printf_string("Hello, world!")
