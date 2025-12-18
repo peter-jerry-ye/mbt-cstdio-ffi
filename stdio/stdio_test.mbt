@@ -13,8 +13,6 @@
 // limitations under the License.
 
 ///|
-
-///|
 test "no file test" {
   // TEST Value: fopen perror isNULL
   let fd : FILE = fopen(b"no-exist.txt\x00", b"r+\x00")
